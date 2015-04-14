@@ -30,7 +30,7 @@ def update_quality(awards)
       when QUALITY_IS_CONSTANT.include?(award.name)
         # do nothing
       when QUALITY_DECREASES_BY_2.include?(award.name)
-        award.quality -= 2 if award.quality > 1
+        award.quality -= 2 if award.quality > 0
       else
         award.quality -= 1 if award.quality > 0
     end
